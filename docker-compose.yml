@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+    app:
+        build:
+            context: .
+        volumes:
+            - static_data:/vol/static
+        env_file: .env
+
+volumes:
+    static_data:
