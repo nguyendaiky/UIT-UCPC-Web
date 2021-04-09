@@ -10,19 +10,12 @@ def home(request):
     return render(request, 'register/home.html', context)
 
 def register(request):
+    tf = teamForm(request.POST or None)
+    if tf.is_valid():
+        tf.save()
+        tf = teamForm()
     context = {'tf': teamForm}
     return render(request, 'register/register.html', context)
-
-def getForm(request):
-    if request.method == "POST":
-        tf = teamForm(request.POST)
-        if tf.is_valid():
-            tf.save()
-            ctx = {"st": "Success! Thanks for register UCPC!", "tf": tf}
-            return render(request, 'register/success.html', ctx)
-        else:
-            ctx = {"st": "Invalid value! Try again!"}
-            return render(request, 'register/fail.html', ctx)
 
 
 
