@@ -12,7 +12,15 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{% static 'register/images/introduction/banner.jpg' %}">
+                <img  width="100%" src="{% static 'register/images/introduction/banner1.jpg' %}">
+            </div>
+            <div class="carousel-item">
+                <img  width="100%" src="{% static 'register/images/introduction/banner2.jpg' %}">
+            </div>
+            <div class="carousel-item" >
+                <video  width="100%" autoplay muted loop>
+                    <source src="{% static 'register/videos/trailer.mp4' %}" type="video/mp4">
+                </video>
             </div>
         </div>
         <a class="carousel-control-prev" href="#introduction_slider" role="button" data-slide="prev">
@@ -26,6 +34,89 @@
     </div>
     <!-- Slider giới thiệu -->
     
+    <!-- Thời Gian Đăng Ký -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            const second = 1000, minute = second * 60, hour = minute * 60, day = hour *60
+
+            let deadline = "April 20, 2021 00:00:00"
+            let countDown = new Date(deadline).getTime()
+            let x = setInterval(function(){
+                let now = new Date().getTime()
+                let distance = countDown - now
+                document.querySelector("#days").innerHTML = Math.floor(distance / (day)),
+                document.querySelector("#hours").innerHTML = Math.floor((distance % (day)) / (hour)),
+                document.querySelector("#minutes").innerHTML = Math.floor((distance % (hour)) / (minute)),
+                document.querySelector("#seconds").innerHTML = Math.floor((distance % (minute)) / second);
+            }, 0)
+        })
+    </script>
+    <style>
+        #countdown
+        {
+            background-color: gray;
+        }
+        #countdown_clock li span
+        {
+            display: block;
+            font-size: 2.5rem;
+        }
+
+        #countdown_clock li
+        {
+            display: inline-block;
+            font-size: 1.5em;
+            list-style-type: none;
+            padding: 1em;
+        }
+
+        #countdown_clock h6
+        {
+            text-align: center;
+        }
+    </style>
+    <div id="countdown" class="container-fluid">
+        <div id="countdown_info" class="row">
+            <div class="col-lg-6">
+                <h1>Thời hạn đăng ký</h1>
+                <h6>Ngày 00/00/2021</h6>
+            </div>
+            <div id="countdown_clock" class="col-lg-6">
+                <h6>Time Remaining!</h6>
+                <ul id="countdown_clock">
+                    <li><span id="days"></span>DAYS</li>
+                    <li><span id="hours"></span>HOURS</li>
+                    <li><span id="minutes"></span>MINUTES</li>
+                    <li><span id="seconds"></span>SECONDS</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Thời Gian Đăng Ký -->
+
+    
+    <!-- Thông Tin Cuộc Thi -->
+    <section id="services">
+        <div class="container">
+            <h1>UCPC</h1>
+            
+        </div>
+    </section>
+    <!-- Thông Tin Cuộc Thi -->
+    <section id="services">
+        <div class="container">
+            <h1>Giải Thưởng</h1>
+            
+        </div>
+    </section>
+    <section id="services">
+        <div class="container">
+            <h1>Timeline</h1>
+            
+        </div>
+    </section>
+
     <!-- Giới thiệu nhà tài trợ -->
     <section style="background-color: silver;" class="bg-100 py-5">
         <div class="container">
@@ -144,15 +235,5 @@
         </div>
     </section>
     <!-- Giới thiệu nhà tài trợ -->
-
-    <!-- Thông Tin Cuộc Thi -->
-    <section id="services">
-        <div class="container">
-            <h1>UCPC</h1>
-            
-        </div>
-    </section>
-    <!-- Thông Tin Cuộc Thi -->
-
 
 {% endblock content %}
