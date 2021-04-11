@@ -1,0 +1,10 @@
+nav > .collapse > ul > li > a
+{
+    font-size: 25px;
+    color: white;
+}
+
+nav
+{
+    background-color: #482b78;
+}
