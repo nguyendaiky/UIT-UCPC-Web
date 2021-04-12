@@ -51,10 +51,10 @@
             }, 0)
         })
     </script>
-    <style>
+    <!-- <style>
         #countdown
         {
-            background-color: gray;
+            background-color: #482b78;
         }
         #countdown_clock li span
         {
@@ -68,21 +68,28 @@
             font-size: 1.5em;
             list-style-type: none;
             padding: 1em;
+            color: white;
+            /* chinh lai mau background */
+            background-color: brown;
+            width: 140px;
+            height: 140px;
+            text-align: center;
+            border-radius: 30px;
         }
 
         #countdown_clock h6
         {
             text-align: center;
         }
-    </style>
+    </style> -->
     <div id="countdown" class="container-fluid">
         <div id="countdown_info" class="row">
             <div class="col-lg-6">
-                <h1>Thời hạn đăng ký</h1>
-                <h6>Ngày 00/00/2021</h6>
+                <h1 style="color: white;">Thời hạn đăng ký</h1>
+                <h4 style="color: white;">Ngày 00/00/2021</h4>
             </div>
-            <div id="countdown_clock" class="col-lg-6">
-                <h6>Time Remaining!</h6>
+            <div id="countdown_clock_zone" class="col-lg-6">
+                <h6 style="color: white;">Time Remaining!</h6>
                 <ul id="countdown_clock">
                     <li><span id="days"></span>DAYS</li>
                     <li><span id="hours"></span>HOURS</li>
