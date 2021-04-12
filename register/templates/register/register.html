@@ -7,15 +7,13 @@
 <h3>Register</h3>
 <hr>
 
+{% for message in messages %}
+	<p id="messages">{{message}}</p>
+{% endfor %}
+
 <div class="form-group">
 	<form action="{% url 'register:register' %}" method="post">
 		{% csrf_token %}
-		<!-- {% for field in tf %}
-			<div class="mb-3">
-				<label for="{{ field.id_for_label }}" class='form-label'>{{ field.label }}</label>
-				{{ field }}
-			</div>
-		{% endfor %} -->
 		{{ tf.as_p }}
 		<button type="submit" class="btn btn-primary">Submit</button>
 	</form>
