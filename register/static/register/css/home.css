@@ -1,6 +1,6 @@
 #countdown
 {
-    background-color: #482b78;
+    background-color: silver;
 }
 #countdown_clock li span
 {
@@ -16,7 +16,7 @@
     padding: 1em;
     color: white;
     /* chinh lai mau background */
-    background-color: brown;
+    background-color: blue;
     width: 140px;
     height: 140px;
     text-align: center;
@@ -26,4 +26,9 @@
 #countdown_clock h6
 {
     text-align: center;
+}
+
+#introduction_slider
+{
+    height: 900px;
 }

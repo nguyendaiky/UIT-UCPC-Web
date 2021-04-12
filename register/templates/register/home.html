@@ -1,15 +1,17 @@
 
 {% extends 'register/main.html' %}
 {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'register/css/main.css' %}">
 
+<link rel="stylesheet" type="text/css" href="{% static 'register/css/home.css' %}">
 {% block content %}
     <!-- Slider giới thiệu -->
     <div id="introduction_slider" class="carousel slide" data-interval="false">
-        <ol class="carousel-indicators">
+        <!-- <ol class="carousel-indicators">
             <li data-target="#introduction_slider" data-slide-to="0" class="active"></li>
             <li data-target="#introduction_slider" data-slide-to="1"></li>
             <li data-target="#introduction_slider" data-slide-to="2"></li>
-        </ol>
+        </ol> -->
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img  width="100%" src="{% static 'register/images/introduction/banner1.jpg' %}">
@@ -18,7 +20,7 @@
                 <img  width="100%" src="{% static 'register/images/introduction/banner2.jpg' %}">
             </div>
             <div class="carousel-item" >
-                <video  width="100%" autoplay muted loop>
+                <video  width="100%"autoplay muted loop>
                     <source src="{% static 'register/videos/trailer.mp4' %}" type="video/mp4">
                 </video>
             </div>
@@ -34,6 +36,43 @@
     </div>
     <!-- Slider giới thiệu -->
     
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto text-center">
+                <li class="nav-item active">
+                    <a style="margin-left: 140px; margin-right: 140px;" class="nav-link" href="">Về UCPC</a>
+                </li>
+                <li>
+                    <a style="margin-left: 140px; margin-right: 140px;" class="nav-link" href="">Giải Thưởng</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="mx-auto order-0">
+            <a class="navbar-brand mx-auto" href="#">
+                <img width="83px" height="83px" src="{% static 'register/images/introduction/logo3.jpg' %}">
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto text center">
+                <li class="nav-item active">
+                    <a style="margin-left: 140px; margin-right: 140px;" class="nav-link" href="">Lịch Trình</a>
+                </li>
+                <li>
+                    <a style="margin-left: 140px; margin-right: 140px;" class="nav-link" href="">Liên Hệ</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <!-- Navbar -->
+
+
     <!-- Thời Gian Đăng Ký -->
     <script>
         document.addEventListener("DOMContentLoaded", function(){
@@ -51,44 +90,13 @@
             }, 0)
         })
     </script>
-    <!-- <style>
-        #countdown
-        {
-            background-color: #482b78;
-        }
-        #countdown_clock li span
-        {
-            display: block;
-            font-size: 2.5rem;
-        }
-
-        #countdown_clock li
-        {
-            display: inline-block;
-            font-size: 1.5em;
-            list-style-type: none;
-            padding: 1em;
-            color: white;
-            /* chinh lai mau background */
-            background-color: brown;
-            width: 140px;
-            height: 140px;
-            text-align: center;
-            border-radius: 30px;
-        }
-
-        #countdown_clock h6
-        {
-            text-align: center;
-        }
-    </style> -->
-    <div id="countdown" class="container-fluid">
+    <div style="color: silver;" id="countdown" class="container-fluid">
         <div id="countdown_info" class="row">
             <div class="col-lg-6">
                 <h1 style="color: white;">Thời hạn đăng ký</h1>
                 <h4 style="color: white;">Ngày 00/00/2021</h4>
             </div>
-            <div id="countdown_clock_zone" class="col-lg-6">
+            <div id="countdown_system" class="col-lg-6">
                 <h6 style="color: white;">Time Remaining!</h6>
                 <ul id="countdown_clock">
                     <li><span id="days"></span>DAYS</li>
@@ -107,22 +115,87 @@
     <section id="services">
         <div class="container">
             <h1>UCPC</h1>
-            
+            <p>UCPC là cuộc thi lập trình được tổ chức thường niên bởi khoa Khoa Học Máy Tính và Trường Đại Học Công Nghệ Thông Tin Đại Học Quốc Gia TPHCM</p>
+            <p>Cuộc thi dành cho sinh viên và học sinh</p>
+            <p>Cuộc thi khó vl</p>
+            <p>bla bla bla</p>
         </div>
     </section>
     <!-- Thông Tin Cuộc Thi -->
+
+    <!-- Thông Tin giải thưởng -->
     <section id="services">
         <div class="container">
             <h1>Giải Thưởng</h1>
-            
+            <h2>Giải Nhất</h2>
+            <p>100000000000000 USD</p>
+            <h2>Giải Nhì</h2>
+            <p>100000000000000 USD</p>
         </div>
     </section>
-    <section id="services">
-        <div class="container">
-            <h1>Timeline</h1>
-            
+    <!-- Thông Tin giải thưởng -->
+
+    <!-- Lịch trình -->
+    <style>
+        /* The actual timeline (the vertical ruler) */
+        ul.timeline
+        {
+            list-style-type: none;
+            position: relative;
+        }
+
+        ul.timeline:before 
+        {
+            content: ' ';
+            background: #d4d9df;
+            display: inline-block;
+            position: absolute;
+            left: 29px;
+            width: 2px;
+            height: 100%;
+            z-index: 400;
+        }
+        ul.timeline > li 
+        {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        ul.timeline > li:before 
+        {
+            content: ' ';
+            background: white;
+            display: inline-block;
+            position: absolute;
+            border-radius: 50%;
+            border: 3px solid #22c0e8;
+            left: 20px;
+            width: 20px;
+            height: 20px;
+            z-index: 400;
+        }
+    </style>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <h3>Lịch trình</h3>
+                <ul class="timeline">
+                    <li>
+                        <h5>Bắt đầu mở đăng ký</h5>
+                        <p>Ngày 00/00/2021</p>
+                    </li>
+                    <li>
+                        <h5>Hạn chót đăng ký</h5>
+                        <p>Ngày 00/00/2021</p>
+                    </li>
+                    <li>
+                        <h5>Tổ chức cuộc thi</h5>
+                        <p>Ngày 00/00/2021</p>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </section>
+    </div>
+    <!-- Lịch trình -->
 
     <!-- Giới thiệu nhà tài trợ -->
     <section style="background-color: silver;" class="bg-100 py-5">
