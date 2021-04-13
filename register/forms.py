@@ -15,7 +15,7 @@ class teamForm(forms.ModelForm):
     password = forms.CharField(max_length = 20, label = 'Password', widget = forms.PasswordInput(attrs={'class': 'form-control'}))
 
 class loginForm(forms.Form):
-    team = forms.CharField(max_length = 30, label = 'Team',widget = forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'example: Team01' }))
+    email = forms.CharField(widget = forms.TextInput(attrs={'class': 'form-control'}))
     password = forms.CharField(max_length = 20, label = 'Password', widget = forms.PasswordInput(attrs={'class': 'form-control'}))
     
         
