@@ -1,7 +1,7 @@
 nav > .collapse > ul > li > a
 {
     font-size: 25px;
-    color: white;
+    color: rgb(255, 255, 255);
     margin-left: 60px;
     margin-right: 60px;
 }
