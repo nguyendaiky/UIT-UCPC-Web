@@ -1,7 +1,26 @@
+/* Style for countdown */
 #countdown
 {
     background-color: white;
+    margin-top: 30px;
 }
+
+#countdown #countdown_info div
+{
+    color: #482b78
+}
+
+#countdown #countdown_info div h1
+{
+    font-size: 60px;
+    font-weight: bold;
+}
+
+#countdown #countdown_systm h4
+{
+    color: #482b78
+}
+
 #countdown_clock li span
 {
     display: block;
@@ -11,21 +30,23 @@
 #countdown_clock li
 {
     display: inline-block;
-    font-size: 1.5em;
+    font-size: 1em;
     list-style-type: none;
     padding: 1em;
     color: white;
-    background-color: #782b45;
-    width: 140px;
-    height: 140px;
+    background-color: #482b78;
+    width: 120px;
+    height: 120px;
     text-align: center;
-    border-radius: 30px;
+    /* border-radius: 30px; */
 }
 
 #countdown_clock h6
 {
     text-align: center;
 }
+
+/* Style for countdown */
 
 #introduction_slider
 {

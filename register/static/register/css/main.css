@@ -1,13 +1,30 @@
 nav > .collapse > ul > li > a
 {
     font-size: 25px;
-    color: rgb(255, 255, 255);
+    color: white;
     margin-left: 60px;
     margin-right: 60px;
 }
 
 nav
 {
-    background-color: rgba(72, 43, 120);
+    background-color: #482b78;
 }
+
+.navbar-brand
+{
+    margin-left: 150px;
+    margin-right: 150px;
+} 
+
+/* #nav_left
+{
+    margin-right: 140px;
+} */
+
+/* #nav_right
+{
+    margin-left: 2000px; 
+} */
+
 
