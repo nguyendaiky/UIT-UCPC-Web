@@ -48,9 +48,20 @@
 
 /* Style for countdown */
 
-#introduction_slider
+
+
+/* Style for timeline */
+
+#timeline
 {
-    height: 900px;
+    margin-top: 15px;
+}
+
+#timeline_heading h3
+{
+    color: #482b78;
+    font-weight: bold;
+    font-size: 60px;
 }
 
 ul.timeline
@@ -61,30 +72,51 @@ ul.timeline
 
 ul.timeline:before 
 {
+    margin-left: 15px;
     content: ' ';
     background: #d4d9df;
     display: inline-block;
     position: absolute;
-    left: 29px;
+    left: 31px;
     width: 2px;
     height: 100%;
     z-index: 400;
 }
 ul.timeline > li 
 {
-    margin: 20px 0;
+    margin-left: 15px;
+    margin-top: 20px;
     padding-left: 20px;
+    color: #482b78;
 }
+
+ul.timeline > li > h5
+{
+    font-size: 40px;
+}
+
 ul.timeline > li:before 
 {
+    margin-top: 10px;
+    margin-left: 15px;
     content: ' ';
     background: white;
     display: inline-block;
     position: absolute;
     border-radius: 50%;
-    border: 3px solid #22c0e8;
+    border: 3px solid #482b78;
     left: 20px;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     z-index: 400;
 }
+
+/* Style for timeline */
+
+
+
+#introduction_slider
+{
+    height: 900px;
+}
+
