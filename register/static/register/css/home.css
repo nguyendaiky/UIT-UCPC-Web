@@ -1,6 +1,6 @@
 #countdown
 {
-    background-color: silver;
+    background-color: white;
 }
 #countdown_clock li span
 {
@@ -15,7 +15,7 @@
     list-style-type: none;
     padding: 1em;
     color: white;
-    background-color: #482b78;
+    background-color: #782b45;
     width: 140px;
     height: 140px;
     text-align: center;
