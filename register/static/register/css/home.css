@@ -38,6 +38,7 @@
     width: 120px;
     height: 120px;
     text-align: center;
+    margin-left: 0px;
     /* border-radius: 30px; */
 }
 
@@ -45,6 +46,8 @@
 {
     text-align: center;
 }
+
+
 
 /* Style for countdown */
 
@@ -113,7 +116,36 @@ ul.timeline > li:before
 
 /* Style for timeline */
 
+/* Style for reward */
 
+#reward
+{
+    margin-top: 20px;
+}
+
+#reward .row #total_reward p
+{
+    width: 500px;
+    height: 80px;
+    background-color: #482b78;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+}
+
+#reward_information h1
+{
+    width: 350px;
+    height: 50px;
+    background-color: #482b78;
+    color: white;
+    font-weight: bold;
+    font-size: 3opx;
+    text-align: center;
+}
+
+/* Style for reward */
 
 #introduction_slider
 {
