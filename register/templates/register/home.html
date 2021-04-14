@@ -74,18 +74,20 @@
     <!-- Thời Gian Đăng Ký -->
     <script>
         document.addEventListener("DOMContentLoaded", function(){
-            const second = 1000, minute = second * 60, hour = minute * 60, day = hour *60
 
             let deadline = "April 30, 2021 00:00:00"
             let countDown = new Date(deadline).getTime()
-            console.log(countDown)
             let x = setInterval(function(){
                 let now = new Date().getTime()
                 let distance = countDown - now
-                document.querySelector("#days").innerHTML = Math.floor(distance / (day)),
-                document.querySelector("#hours").innerHTML = Math.floor((distance % (day)) / (hour)),
-                document.querySelector("#minutes").innerHTML = Math.floor((distance % (hour)) / (minute)),
-                document.querySelector("#seconds").innerHTML = Math.floor((distance % (minute)) / second);
+                document.querySelector("#days").innerHTML = Math.floor(distance / (1000 * 60 * 60 * 24)),
+                document.querySelector("#hours").innerHTML = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+                document.querySelector("#minutes").innerHTML = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+                document.querySelector("#seconds").innerHTML = Math.floor((distance % (1000 * 60)) / 1000);
+            // if (distance < 0)
+            // {
+
+            // }
             }, 0)
         })
     </script>
@@ -131,7 +133,8 @@
                 <h5 style="margin-top: 10px;">Tổng Giải Thưởng Lên Đến:</h5>
                 <p style="margin-top: 10px;">2.000.000 VND</p>
             </div>
-            <div id="reward_information" class="col-lg-6"> 
+
+            <div id="reward_information" class="col-lg-6">
                 <h4>
                     Giải Nhất
                 </h4>
