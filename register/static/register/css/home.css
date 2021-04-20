@@ -1,3 +1,15 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+    /* margin-bottom: 0px; */
+}
+
 /* Style for countdown */
 #countdown
 {
@@ -67,7 +79,78 @@
     font-size: 60px;
 }
 
-ul.timeline
+#timeline .timeline_information .timeline_box
+{
+    border:none;
+    /* height:200px; */
+    /* align-items: center; */
+}
+
+#timeline .timeline_information .timeline_box .timeline_top
+{
+    /* font-size: 30px;
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    background-color: #482b78;
+    margin-bottom: 0px; */
+    min-height: 60px;
+    text-align: center;
+    display: -webkit-inline-box;
+    /* display: -ms-inline-flexbox; */
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #482b78;
+}
+
+#timeline .timeline_information .timeline_box .timeline_top p
+{
+    color:white;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+
+#timeline .timeline_information .timeline_box .timeline_bottom 
+{
+    /* min-height: 100px;
+    font-size: 25px;
+    color: #482b78;
+    font-weight: bolder;
+    text-align: center;
+    display: -webkit-inline-box;
+    -webkit-box-pack: center;
+    align-items: center;
+    justify-content: center; */
+
+    min-height: 140px;
+    text-align: center;
+    display: -webkit-inline-box;
+    /* display: -ms-inline-flexbox; */
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #2f0452;
+}
+
+#timeline .timeline_information .timeline_box .timeline_bottom p
+{
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+}
+/* ul.timeline
 {
     list-style-type: none;
     position: relative;
@@ -112,7 +195,7 @@ ul.timeline > li:before
     width: 25px;
     height: 25px;
     z-index: 400;
-}
+} */
 
 /* Style for timeline */
 
@@ -168,3 +251,34 @@ ul.timeline > li:before
     height: 900px;
 }
 
+/* footer */
+#footer
+{
+    background-color: #482b78;
+}
+#footer .organizers h5
+{
+    font-size: 25px;
+    font-weight: bolder;
+    color:white;
+    text-align: center;
+}
+
+#footer .organizers .unit_logo .unit
+{
+    display: -webkit-inline-box;
+    /* display: -ms-inline-flexbox; */
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+#footer .organizers .unit_logo .unit img
+{
+    width: 50px;
+    /* align-items: center; */
+}
