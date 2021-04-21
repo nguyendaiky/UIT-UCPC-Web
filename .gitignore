@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 register/static/register/videos/
+register/migrations/__pycache__
+ucpc/__pycache__
+
 =======
 # Django #
 *.log
