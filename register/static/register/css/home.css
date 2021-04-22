@@ -13,13 +13,18 @@ p {
 /* Style for countdown */
 #countdown
 {
-    background-color: white;
-    margin-top: 30px;
+    background-color: white;   
+    border-bottom: 1px solid;
+    border-color: #482b78;
+    min-height: 250px;
+    padding-top: 65px;
+    margin-bottom: 40px;
 }
 
 #countdown #countdown_info div
 {
-    color: #482b78
+    color: #482b78;
+    padding-bottom: 0px;
 }
 
 #countdown #countdown_info div h1
@@ -28,9 +33,13 @@ p {
     font-weight: bold;
 }
 
-#countdown #countdown_systm h4
+#countdown #countdown_system h4
 {
     color: #482b78
+}
+
+#countdown_clock {
+    margin-bottom: 0px;
 }
 
 #countdown_clock li span
@@ -59,7 +68,16 @@ p {
     text-align: center;
 }
 
+#services .container {
+    border-bottom: 1px #482b78 solid;
+    padding-bottom: 45px;
+}
 
+#services .container h1 {
+    font-size: 60px;
+    font-weight: bold;
+    color: #482b78;
+}
 
 /* Style for countdown */
 
@@ -173,7 +191,7 @@ p {
 
 #reward .row #total_reward p
 {
-    width: 500px;
+    width: 450px;
     height: 80px;
     background-color: #482b78;
     color: white;
@@ -185,6 +203,7 @@ p {
 #reward_information
 {
     padding-top: 26px;
+    margin: 0px;
 }
 
 #reward_information h1
@@ -249,4 +268,11 @@ p {
 
 #footer .contact .row .unit_gm {
     text-align: left;
+}
+
+@media only screen and (max-width: 800px)
+{
+    #introduction_slider {
+        height: auto;
+    }
 }
