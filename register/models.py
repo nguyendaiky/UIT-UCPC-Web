@@ -12,6 +12,7 @@ PhoneRegex = RegexValidator(r'^[0-9]*$')
 
 # Create your models here.
 class School(models.Model):
+    id = models.AutoField(primary_key=True)
     school = models.CharField(max_length=50, null=False, blank=False)
     logo_path = models.CharField(max_length=100)
     
@@ -19,6 +20,7 @@ class School(models.Model):
         return self.school
 
 class Team(models.Model):
+    id = models.AutoField(primary_key=True)
     team = models.CharField(max_length=30, null=False, blank=False, unique=True, validators=[TeamRegex])
     member1 = models.CharField(max_length=30, null=False, blank=False, validators=[NameRegex])
     member2 = models.CharField(max_length=30, null=False, blank=False, validators=[NameRegex])
