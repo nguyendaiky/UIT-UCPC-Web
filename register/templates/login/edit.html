@@ -1,0 +1,47 @@
+
+{% extends 'register/main.html' %}
+{% load static %}
+
+{% block content %}
+
+<h3>Edit</h3>
+<hr>
+
+{% for message in messages %}
+	<p id="messages">{{message}}</p>
+{% endfor %}
+<!-- 
+	{{ emp.team }}
+	{{ emp.member1 }}
+	{{ emp.member2 }}
+	{{ emp.member3 }} -->
+
+<div class="form-group">
+	<form action="{% url 'register:edit' %}" method="post">
+		{% csrf_token %}
+		{{ ef.as_p }}
+		<!-- <div class="mb-3">
+			<label for="exampleFormControlInput1" class="form-label">Team's name</label>
+			<input type="text" class="form-control" id="exampleFormControlInput1" value="{{ emp.team }}">
+		</div>
+		<div class="mb-3">
+			<label for="exampleFormControlInput1" class="form-label">Member 1</label>
+			<input type="text" class="form-control" id="exampleFormControlInput1" value="{{ emp.member1 }}">
+		</div>
+		<div class="mb-3">
+			<label for="exampleFormControlInput1" class="form-label">Member 2</label>
+			<input type="text" class="form-control" id="exampleFormControlInput1" value="{{ emp.member2 }}">
+		</div>
+		<div class="mb-3">
+			<label for="exampleFormControlInput1" class="form-label">Member 3</label>
+			<input type="text" class="form-control" id="exampleFormControlInput1" value="{{ emp.member3 }}">
+		</div>
+		<div class="mb-3">
+			<label for="exampleFormControlInput1" class="form-label">Phone</label>
+			<input type="text" class="form-control" id="exampleFormControlInput1" value="{{ emp.phone }}">
+		</div> -->
+		<button type="submit" class="btn btn-primary">Save</button>
+	</form>
+</div>
+
+{% endblock content %}
