@@ -4,12 +4,7 @@
 
 {% block content %}
     <!-- Slider giới thiệu -->
-    <div id="introduction_slider" class="carousel slide" data-interval="false">
-        <!-- <ol class="carousel-indicators">
-            <li data-target="#introduction_slider" data-slide-to="0" class="active"></li>
-            <li data-target="#introduction_slider" data-slide-to="1"></li>
-            <li data-target="#introduction_slider" data-slide-to="2"></li>
-        </ol> -->
+    <div id="introduction_slider" style ="height: auto; " class="carousel slide" data-interval="false">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img  width="100%" src="{% static 'register/images/introduction/banner1.jpg' %}">
@@ -36,42 +31,42 @@
     
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg sticky-top">
-        
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto text-center" id="nav_left">
-                <li  class="nav-item active">
-                    <a class="nav-link" href="#ucpc">UCPC</a>
-                </li>
-                <li style="margin-right: 100px;" class="nav-item">
-                    <a  class="nav-link" href="">Giải Thưởng</a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="mx-auto order-0">
-            <a class="navbar-brand mx-auto" >
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" >
                 <img width="83px" height="83px" src="{% static 'register/images/introduction/logo3.jpg' %}">
             </a>
-            
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li  class="nav-item active">
+                <a class="nav-link" href="#ucpc">UCPC</a>
+            </li>
+            <li class="nav-item">
+                <a  class="nav-link" href="">Giải Thưởng</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#timeline">Lịch Trình</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Liên Hệ</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <button class="btn btn-outline-success" type="login" style="font-size: 18px;">Login</button>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="font-size: 18px;">Register</button>
+          </form>
         </div>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" id="nav_right">
-            <ul class="navbar-nav mr-auto text center">
-                <li style="margin-left: 100px;" class="nav-item">
-                    <a class="nav-link" href="#timeline">Lịch Trình</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="">Liên Hệ</a>
-                </li>
-            </ul>
         </div>
+      </nav>
 
-    </nav>
 
     <!-- Navbar -->
-
-
+    
+    
     <!-- Thời Gian Đăng Ký -->
     <script>
         document.addEventListener("DOMContentLoaded", function(){
@@ -94,11 +89,11 @@
     </script>
     <div id="countdown" class="container">
         <div id="countdown_info" class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <h1>Thời hạn đăng ký</h1>
                 <h4>Ngày 20/05/2021</h4>
             </div>
-            <div id="countdown_system" class="col-lg-6">
+            <div id="countdown_system" class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <!-- <h4>Time Remaining!</h4> -->
                 <ul id="countdown_clock">
                     <li><span id="days"></span>NGÀY</li>
@@ -128,24 +123,18 @@
     <div id="reward" class="container">
         <div class="row">
             <div id="total_reward" class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <h1 style="margin-top: 10px;">Giải Thưởng</h1>
-                <h5 style="margin-top: 10px;">Tổng Giải Thưởng Lên Đến:</h5>
-                <p style="margin-top: 10px;">2.000.000 VND</p>
+                <h1 style="margin-top: 10px;">Tổng Giải Thưởng Lên Đến:</h1>
+                <h5 style="margin-top: 10px;"></h5>
+                <!-- <p style="margin-top: 30px; ">2.000.000 VND</p> -->
+                <img src="{%static 'register/images/reward/giai-02.png'%}" alt="">
             </div>
 
             <div id="reward_information" class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <h4>
-                    Giải Nhất
-                </h4>
-                <h1>
-                    1.000.000 VND
-                </h1>
-                <h4>
-                    Giải Nhì
-                </h4>
-                <h1>
-                    1.000.000 VND
-                </h1>
+                <a href="" target="_blank" rel="noopener noreferrer">
+                    <p>
+                        ĐĂNG KÝ
+                    </p>
+                </a>
             </div>
         </div>
     </div>
@@ -153,7 +142,7 @@
     <!-- Thông Tin giải thưởng -->
 
     <!-- Lịch trình -->
-    <div id="timeline" class="container">
+    <!-- <div id="timeline" class="container">
         <div id="timeline_heading" class="col-lg-6">
             <h3>Lịch trình</h3>
         </div>
@@ -191,13 +180,16 @@
             </div>  
         </div>
 
-    </div>
+    </div> -->
+
+
+    
     <!-- Lịch trình -->
 
 
     
     <!-- Giới thiệu nhà tài trợ -->
-    <section style="background-color: silver;" class="bg-100 py-5">
+    <section style="background-color:#482b78;" class="bg-100 py-5">
         <div class="container">
             <div class="row">
                 <!-- Căn giữa cho các item -->
@@ -336,7 +328,7 @@
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-4">
                                         <div class="unit">
-                                            <img src="{% static 'register/images/footer/CS.png' %}">
+                                            <img class="CS" src="{% static 'register/images/footer/CS.png' %}">
                                         </div>
                                     </div>
                                 </div>

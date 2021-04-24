@@ -3,12 +3,21 @@ html
     scroll-behavior: smooth;
 }
 
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: #482b78;
+    color: white;
+}
+
 nav > .collapse > ul > li > a
 {
     font-size: 25px;
     color: white;
-    margin-left: 60px;
-    margin-right: 60px;
+    /* margin-left: 60px;
+    margin-right: 60px; */
 }
 
 nav
@@ -16,20 +25,15 @@ nav
     background-color: #482b78;
 }
 
-.navbar-brand
+/* .navbar-brand
 {
     margin-left: 150px;
     margin-right: 150px;
-} 
+}  */
 
-/* #nav_left
-{
-    margin-right: 140px;
-} */
-
-/* #nav_right
-{
-    margin-left: 2000px; 
-} */
-
+.navbar-dark .navbar-collapse .navbar-nav .nav-item .nav-link {
+    color: white;
+    font-size: 20px;
+    margin-left: 20px;
+}
 

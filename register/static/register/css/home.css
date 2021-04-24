@@ -10,36 +10,45 @@ p {
     /* margin-bottom: 0px; */
 }
 
+
+#introduction_slider {
+    height: auto;
+}
 /* Style for countdown */
 #countdown
 {
-    background-color: white;   
+    background-color: #482b78;   
     border-bottom: 1px solid;
-    border-color: #482b78;
-    min-height: 250px;
-    padding-top: 65px;
+    border-color: rgba(255, 255, 255, 0.2);
+    min-height: 200px;
+    padding-top: 38px;
+    padding-bottom: 35px;
     margin-bottom: 40px;
+    color: white;
 }
 
 #countdown #countdown_info div
 {
-    color: #482b78;
+    color: white;
     padding-bottom: 0px;
 }
 
 #countdown #countdown_info div h1
 {
-    font-size: 60px;
+    font-size: 48px;
     font-weight: bold;
 }
 
-#countdown #countdown_system h4
+#countdown #countdown_info h4
 {
-    color: #482b78
+    color: white;
+    font-size: 27px;
 }
 
 #countdown_clock {
     margin-bottom: 0px;
+    /* display: flex;
+    flex-direction: row; */
 }
 
 #countdown_clock li span
@@ -50,12 +59,13 @@ p {
 
 #countdown_clock li
 {
+    font-weight: bold;
     display: inline-block;
     font-size: 1em;
     list-style-type: none;
     padding: 1em;
-    color: white;
-    background-color: #482b78;
+    color: #482b78;
+    background-color: white;
     width: 121px;
     height: 121px;
     text-align: center;
@@ -69,7 +79,7 @@ p {
 }
 
 #services .container {
-    border-bottom: 1px #482b78 solid;
+    border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
     padding-bottom: 45px;
 }
 
@@ -170,69 +180,117 @@ p {
 }
 
 /* Style for timeline */
-
+/* UCPC */
+#ucpc .container {
+    border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+    padding-bottom: 40px;
+}
+/* UCPC */
 /* Style for reward */
+
+#reward {
+    min-height: 250px;
+    border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+    /* margin-top: 0px; */
+    align-items: center;
+    padding-top: 40px;
+}
 
 #reward #total_reward h1, h5
 {
-    color: #482b78;
-    font-weight: bold;
+    color: white;
+    /* font-weight: bold; */
 }
 
 #reward #total_reward h1
 {
-    font-size: 60px;
+    font-size: 25px;
 }
 
-#reward
+#reward #total_reward h5
 {
-    margin-top: 20px;
+    /* font-size: 10px;
+    font-weight: lighter;
+    font-style: initial; */
 }
+
+
 
 #reward .row #total_reward p
 {
     width: 450px;
     height: 80px;
-    background-color: #482b78;
-    color: white;
+    background-color: white;
+    color: #ffdb19;
     font-weight: bold;
     font-size: 50px;
     text-align: center;
 }
 
-#reward_information
+#reward .row #total_reward img
 {
-    padding-top: 26px;
-    margin: 0px;
+    width: 480px;
+    height: 139x;
 }
 
-#reward_information h1
-{
-    width: 350px;
-    height: 50px;
-    background-color: #482b78;
-    color: white;
-    font-weight: bold;
-    font-size: 35px;
+#reward_information {
     text-align: center;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow-x: hidden;
 }
+
+#reward_information p
+{
+    /* min-width: 370px; */
+    background-color: #6FCF97;
+    border-radius: 8px;
+    height: 64px;
+    text-align: center;
+    min-width: 214px;
+    font-weight: 600;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    color: #16193C;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow-x: hidden;
+    /* margin-top: 77px; */
+}
+
 
 /* Style for reward */
 
-#introduction_slider
-{
-    height: 900px;
-}
+
+
 
 /* footer */
 #footer
 {
-    background-image: url(/static/register/images/footer/background.png);
     background-repeat: no-repeat;
     background-size: auto;
-    min-height: 500px;
+    min-height: 250px;
     background-color: #482b78;
     background-position: bottom center;
+}
+
+#footer .container {
+    border-top: 1px rgba(255, 255, 255, 0.2) solid;
 }
 
 #footer h5
@@ -258,10 +316,18 @@ p {
     width: 100px;
 }
 
+#footer .organizers .unit_logo .unit .CS
+{
+    width: 140px;
+}
+
 #footer .contact .row{
     align-items: center;
 }
 
+#footer .contact .row img {
+    width: 40px;
+}
 #footer .contact .row .unit_fb {
     text-align: right;
 }
@@ -274,5 +340,33 @@ p {
 {
     #introduction_slider {
         height: auto;
+    }
+    #countdown {
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 450px)
+{
+    #introduction_slider {
+        height: auto;
+    }
+
+    #countdown {
+        text-align: center;
+        align-items: center;
+    }
+
+    #countdown #countdown_info div h1
+    {
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    #countdown #countdown_info h4
+    {
+        color: #482b78;
+        font-size: 18px;
     }
 }
