@@ -99,7 +99,7 @@
                     <li><span id="days"></span>NGÀY</li>
                     <li><span id="hours"></span>GIỜ</li>
                     <li><span id="minutes"></span>PHÚT</li>
-                    <li><span id="seconds"></span>GIÂY</li>
+                    <li id = "second_450"><span id="seconds"></span>GIÂY</li>
                 </ul>
             </div>
         </div>
@@ -112,7 +112,7 @@
     <section id="ucpc">
         <div class="container">
             <h1>UCPC</h1>
-            <p>Trong tháng 05/2021 này, Liên chi Hội khoa Khoa học Máy tính (LCH KHMT) đã quyết định mang UIT ACM (cuộc thi lập trình thuật toán danh giá nhất của UIT) trở lại với một cái tên cũng như diện mạo hoàn toàn mới đó là UIT COLLEGIATE PROGRAMMING CONTEST (UCPC), cuộc thi sẽ kế thừa hoàn toàn những giá trị truyền thống của 11 mùa UIT ACM trước đây. Bước đổi mới này nhằm khẳng định lại vai trò, vị trí cũng như xác định phương hướng phát triển cho cuộc thi lập trình thuật toán danh giá nhất của UIT.</p>
+            <p>UCPC - UIT COLLEGIATE PROGRAMMING CONTEST, cuộc thi sẽ kế thừa hoàn toàn những giá trị truyền thống của 11 mùa UIT ACM trước đây. Bước đổi mới này nhằm khẳng định lại vai trò, vị trí cũng như xác định phương hướng phát triển cho cuộc thi lập trình thuật toán danh giá nhất của UIT.</p>
             <p>UCPC được tổ chức dựa trên format của cuộc thi lập trình thi đấu nổi tiếng thế giới ICPC, với mục đích khuyến khích, đẩy mạnh phong trào học thuật, cũng như tạo ra sân chơi giữa sinh viên trường Đại học Công nghệ Thông tin (ĐH CNTT) nói riêng và sinh viên, học sinh THPT có đam mê về lập trình thuật toán nói chung. Đây cũng là cơ hội để các bạn tiếp cận, nâng cao khả năng của mình trong lĩnh vực lập trình thi đấu, giúp các bạn có thể có những trải nghiệm trong môi trường lập trình thi đấu quốc tế. Đồng thời còn là dịp cho các doanh nghiệp tiếp cận và ươm mầm nhân lực chất lượng cao. </p>
         </div>
     </section>
@@ -143,54 +143,55 @@
 
     <!-- Lịch trình -->
     <div class="timeline">
-        <h1>Lịch Trình</h1>
+        <h1 class = "head" style="margin-left: 20px; margin-bottom: 30px;">Lịch Trình</h1>
         <div class="container left">
-          <div class="date">15 Dec</div>
-          <i class="icon fa fa-home"></i>
+          <div class="date"></div>
+          <!-- <i class="icon fa fa-home"></i> -->
+          <i class="icon fas fa-user-edit"></i>
           <div class="content">
-            <h2>Lorem ipsum dolor sit amet</h2>
+            <h2 style="font-weight: bold;">03/05 : BẮT ĐẦU ĐĂNG KÝ</h2>
             <p>
-              Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+              Mỗi đội có tối đa 3 thành viên, đăng ký theo hình thức online hoặc offline.
             </p>
           </div>
         </div>
         <div class="container right">
-          <div class="date">22 Oct</div>
-          <i class="icon fa fa-gift"></i>
+          <div class="date"></div>
+          <i class="icon fas fa-gamepad"></i>
           <div class="content">
-            <h2>Lorem ipsum dolor sit amet</h2>
+            <h2 style="font-weight: bold;">06/05 : MINI GAME 01</h2>
             <p>
-              Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+              Tham gia bằng cách truy cập trang facebook chính thức của thi UCPC
             </p>
           </div>
         </div>
         <div class="container left">
-          <div class="date">10 Jul</div>
-          <i class="icon fa fa-user"></i>
+          <div class="date"></div>
+          <i class="icon fas fa-gift"></i>
           <div class="content">
-            <h2>Lorem ipsum dolor sit amet</h2>
+            <h2 style="font-weight: bold;">10/05 : MINI GAME 02</h2>
             <p>
-              Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                Tham gia bằng cách truy cập trang facebook chính thức của thi UCPC
             </p>
           </div>
         </div>
         <div class="container right">
-          <div class="date">18 May</div>
-          <i class="icon fa fa-running"></i>
+          <div class="date"></div>
+          <i class="icon fas fa-key"></i>
           <div class="content">
-            <h2>Lorem ipsum dolor sit amet</h2>
+            <h2 style="font-weight: bold;">24/05 : ĐÓNG LINK ĐĂNG KÝ</h2>
             <p>
-              Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+              
             </p>
           </div>
         </div>
         <div class="container left">
-          <div class="date">10 Feb</div>
-          <i class="icon fa fa-cog"></i>
+          <div class="date"></div>
+          <i class="icon fas fa-trophy"></i>
           <div class="content">
-            <h2>Lorem ipsum dolor sit amet</h2>
+            <h2 style="font-weight: bold;">29/05 : DIỄN RA CUỘC THI</h2>
             <p>
-              Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+              Các team tham gia cuộc thi theo hình thức offline.
             </p>
           </div>
         </div>
@@ -206,9 +207,9 @@
                 <!-- Căn giữa cho các item -->
                 <div class="col-12 mx-auto align-items-center text-center">
                     <!-- Tiêu đề -->
-                    <h6 class="mb-4 text-uppercase fw-light fs-1 mb-6">
+                    <h5 class="mb-4 text-uppercase fw-light fs-1 mb-6">
                         Nhà Tài Trợ
-                    </h6>
+                    </h5>
                     <!-- Slider nhà tài trợ -->
                     <div class="carousel slide" id="sponsor_slider" data-ride="carousel">
                         <div class="carousel-inner">
@@ -322,22 +323,22 @@
         <div id="footer" class="container-fluid">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="organizers">
                             <h5>ĐƠN VỊ TỔ CHỨC</h5>
                             <div class="unit_logo">
                                 <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-4">
                                         <div class="unit">
                                             <img src="{% static 'register/images/footer/UIT.png' %}">
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-4">
                                         <div class="unit">
                                             <img src="{% static 'register/images/footer/HSV.png' %}">
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-4">
                                         <div class="unit">
                                             <img class="CS" src="{% static 'register/images/footer/CS.png' %}">
                                         </div>
@@ -347,18 +348,18 @@
                         </div>   
                     </div>
 
-                    <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <h5>LIÊN HỆ</h5>
                         <div class="contact">
                             <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                         <div class="unit_fb">
                                             <a target ="_blank" href="https://www.facebook.com/uit.ucpc">
                                                 <img src="{% static 'register/images/footer/FB.png' %}">
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                         <div class="unit_gm">
                                             <a target ="_blank" href="mailto:uit.ucpc@gmail.com">
                                                 <img src="{% static 'register/images/footer/Gmail.png' %}">

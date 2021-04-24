@@ -47,8 +47,6 @@ p {
 
 #countdown_clock {
     margin-bottom: 0px;
-    /* display: flex;
-    flex-direction: row; */
 }
 
 #countdown_clock li span
@@ -100,6 +98,7 @@ p {
   max-width: 1140px;
   margin: 0 auto;
   padding: 15px 0;
+  border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
 }
 
 .timeline::after {
@@ -165,7 +164,7 @@ p {
   display: inline-block;
   top: calc(50% - 8px);
   text-align: center;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
   color: #006E51;
   text-transform: uppercase;
@@ -231,11 +230,20 @@ p {
   color: #000000;
 }
 
-@media (max-width: 767.98px) {
-  .timeline::after {
-    left: 90px;
-  }
+.timeline .container .date {
+  color: white;
+}
 
+@media (max-width: 767.98px) {
+  .timeline .head {
+    text-align: center;
+  }
+  .timeline::after {
+    left: 33px;
+  }
+  .timeline .container.left {
+    left: -13.5%;
+  }
   .timeline .container {
     width: 100%;
     padding-left: 120px;
@@ -243,7 +251,7 @@ p {
   }
 
   .timeline .container.right {
-    left: 0%;
+    left: -13.5%;
   }
 
   .timeline .container.left::after, 
@@ -302,15 +310,10 @@ p {
 
 #reward #total_reward h1
 {
-    font-size: 25px;
+    font-size: 30px;
 }
 
-#reward #total_reward h5
-{
-    /* font-size: 10px;
-    font-weight: lighter;
-    font-style: initial; */
-}
+
 
 
 
@@ -416,10 +419,8 @@ p {
 
 #footer .organizers .unit_logo .row    
 {
-
     align-items: center;
     text-align: center;
-
 }
 
 #footer .organizers .unit_logo .unit img
@@ -434,10 +435,13 @@ p {
 
 #footer .contact .row{
     align-items: center;
+    text-align: center;
+
 }
 
 #footer .contact .row img {
     width: 40px;
+    margin-top: 15px;
 }
 #footer .contact .row .unit_fb {
     text-align: right;
@@ -456,8 +460,32 @@ p {
         text-align: center;
         align-items: center;
     }
-}
 
+    #reward {
+      text-align: center;
+      align-items: center;
+      padding-bottom: 40px;
+    }
+    #reward #total_reward h1{
+      font-size: 30px;
+    }
+    #reward .row #total_reward img {
+      width: 95%;
+    }
+    #footer .organizers .unit_logo .unit img
+    {
+    width: 60px;
+    }
+    #footer .organizers .unit_logo .unit .CS
+    {
+        width: 100px;
+    }
+    #footer .contact .row img {
+      width: 40px;
+      margin-top: 0px;
+      margin-bottom: 50px;
+  }
+}
 @media only screen and (max-width: 450px)
 {
     #introduction_slider {
@@ -480,4 +508,35 @@ p {
         color: #482b78;
         font-size: 18px;
     }
+
+    #reward #total_reward h1{
+      font-size: 23px;
+    }
+    #footer h5
+  {
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 }
+
+@media only screen and (max-width: 543px)
+{
+  #countdown #countdown_system #countdown_clock #second_450{
+    margin-top: 5px;
+  }
+  #footer .organizers .unit_logo .unit img
+  {
+  width: 50px;
+  }
+  #footer .organizers .unit_logo .unit .CS
+  {
+      width: 70px;
+  }
+  #footer .contact .row img {
+    width: 30px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+}
+
