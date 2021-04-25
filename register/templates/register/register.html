@@ -1,14 +1,12 @@
-
-{% extends 'register/main.html' %}
+{% extends 'register/navigations.html' %}
 {% load static %}
 
 {% block content %}
-
 <h3>Register</h3>
 <hr>
 
 {% for message in messages %}
-	<p id="messages">{{message}}</p>
+<p id="messages">{{message}}</p>
 {% endfor %}
 
 <div class="form-group">
@@ -18,5 +16,4 @@
 		<button type="submit" class="btn btn-primary">Submit</button>
 	</form>
 </div>
-
 {% endblock content %}

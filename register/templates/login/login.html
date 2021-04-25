@@ -1,4 +1,4 @@
-{% extends 'register/main.html' %}
+{% extends 'register/navigations.html' %}
 {% load static %}
 
 {% block content %}
@@ -7,7 +7,7 @@
 <hr>
 
 {% for message in messages %}
-	<p id="messages">{{message}}</p>
+<p id="messages">{{message}}</p>
 {% endfor %}
 
 <div class="form-group">

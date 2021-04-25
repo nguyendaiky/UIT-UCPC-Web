@@ -1,5 +1,4 @@
-html 
-{
+html {
     scroll-behavior: smooth;
 }
 
@@ -8,21 +7,23 @@ html
     padding: 0px;
 }
 body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+
     background-color: #482b78;
     color: white;
 }
 
-
-nav > .collapse > ul > li > a
-{
+nav > .collapse > ul > li > a {
     font-size: 25px;
     color: white;
     /* margin-left: 60px;
     margin-right: 60px; */
 }
 
-nav
-{
+nav {
     background-color: #482b78;
 }
 
@@ -41,4 +42,3 @@ nav
     font-size: 20px;
     margin-left: 20px;
 }
-
