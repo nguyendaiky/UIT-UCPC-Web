@@ -8,13 +8,13 @@
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+	<link rel="stylesheet" href="../../static/style.css">
 
 </head>
 <body>
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	  <a class="navbar-brand" href="{% url 'home' %}">UCPC</a>
+	  <a class="navbar-brand" href="{% url 'register:home' %}">UCPC</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
@@ -22,13 +22,25 @@
 	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 	    <ul class="navbar-nav mr-auto">
 	      <li class="nav-item active">
-	        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+	        <a class="nav-link" href="{% url 'register:home' %}">Home <span class="sr-only">(current)</span></a>
 	      </li>
 	 
 	    </ul>
-	    <div class="form-inline my-2 my-lg-0">
-	     	<a href="{% url 'register' %}"class="btn btn-warning">Đăng ký</a>
+		{% if request.user.is_authenticated %}
+		<div class="form-inline my-2 my-lg-0">
+			<a href="{% url 'register:profile' %}"class="btn btn-success">Profile</a>
+	   </div>
+		<div class="form-inline my-2 my-lg-0">
+			<a href="{% url 'register:logout' %}"class="btn btn-warning">Logout</a>
 	    </div>
+	   {% else %}
+	   <div class="form-inline my-2 my-lg-0">
+		   <a href="{% url 'register:login' %}"class="btn btn-success">Login</a>
+	  </div>
+	   <div class="form-inline my-2 my-lg-0">
+			<a href="{% url 'register:register' %}"class="btn btn-warning">Register</a>
+	   </div>
+		{% endif %}
 	  </div>
 	</nav>
 

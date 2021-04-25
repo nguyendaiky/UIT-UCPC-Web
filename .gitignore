@@ -7,6 +7,10 @@
 __pycache__
 db.sqlite3
 media
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
 
 # Backup files # 
 *.bak 

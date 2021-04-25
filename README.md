@@ -4,7 +4,7 @@
 
 ## For Development
 
-Nhớ tạo branch mới + Django app mới khi muốn thay đổi cấu trúc hệ thống (thêm chức năng)
+### Running
 
 1.  🙂 Windows
 
@@ -32,6 +32,16 @@ pip3 install -r .\requirements.txt
 
 # 🏃‍♂️ Run server
 python3 .\manage.py runserver
+```
+
+### Testing
+
+```sh
+# on Linux
+python3 manage.py test
+
+# on Windows
+python .\manage.py test
 ```
 
 ## For deployment

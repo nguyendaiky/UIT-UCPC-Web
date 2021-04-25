@@ -1,0 +1,56 @@
+
+{% extends 'register/main.html' %}
+{% load static %}
+
+{% block content %}
+
+<h3>Profile</h3>
+<hr>
+
+{% for message in messages %}
+	<p id="messages">{{message}}</p>
+{% endfor %}
+
+<div>
+	{% for item in data %}
+	<span style="font-weight: 600;">Team: </span>
+	{{ item.team }}
+	<br>
+	<span style="font-weight: 600;">Phone: </span>
+	{{ item.phone }}
+	<br>
+	{% endfor %}
+	<span style="font-weight: 600;">Email: </span>
+	{{ user.email }}
+	<br>
+	
+</div>
+<hr>
+
+{% if data %}
+<table>
+	<tbody>
+	{% for item in data %}
+	<tr>
+		<th>Member 1:</th>
+		<td>{{ item.member1 }}</td>
+	</tr>	
+	<tr>
+		<th>Member 2:</th>
+		<td>{{ item.member2 }}</td>
+	</tr>
+	<tr>
+		<th>Member 3:</th>
+		<td>{{ item.member3 }}</td>
+	</tr>
+	<tr>
+		<th>School:</th>
+		<td>{{ item.school }}</td>
+	</tr>
+	{% endfor %}
+	</tbody>
+  </table>
+  <a href="{% url 'register:edit' %}"class="btn btn-primary">Edit</a>
+{% endif %}
+
+{% endblock content %}
