@@ -45,7 +45,7 @@ p {
     font-size: 27px;
 }
 
-#countdown_clock {
+/* #countdown_clock {
     margin-bottom: 0px;
 }
 
@@ -68,12 +68,42 @@ p {
     height: 121px;
     text-align: center;
     margin-left: 0px;
-    /* border-radius: 30px; */
 }
 
 #countdown_clock h6
 {
     text-align: center;
+} */
+
+
+#countdown_system .row .clock
+{
+  background-color: white;
+  text-align: center;
+  align-items: center;
+  height: 120px;
+  border: 5px #482b78 solid ;
+}
+#countdown_system .row .clock div {
+  padding-top: 15px ;
+}
+
+#countdown_system .row .clock p
+{
+  /* padding-top: 10px; */
+  text-align: center;
+  color: #482b78;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: bold;
+}
+#countdown_system .row .clock span
+{
+  /* padding-top: px; */
+  text-align: center;
+  color: #482b78;
+  font-weight: bold;
+  font-size: 30px;
 }
 
 #services .container {
@@ -291,6 +321,7 @@ p {
     border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
     padding-bottom: 40px;
 }
+
 /* UCPC */
 /* Style for reward */
 
@@ -350,7 +381,6 @@ p {
 
 #reward_information p
 {
-    /* min-width: 370px; */
     background-color: #28a745;
     border-radius: 8px;
     height: 64px;
@@ -371,7 +401,6 @@ p {
     -ms-flex-pack: center;
     justify-content: center;
     overflow-x: hidden;
-    /* margin-top: 77px; */
     text-decoration: none;
 }
 
@@ -407,6 +436,11 @@ p {
     border-top: 1px rgba(255, 255, 255, 0.2) solid;
 }
 
+/* #footer .container .unit_logo .unit {
+  background-color: white;
+  border-radius: 8px;
+} */
+
 #footer h5
 {
     font-size: 25px;
@@ -425,13 +459,10 @@ p {
 
 #footer .organizers .unit_logo .unit img
 {
-    width: 100px;
+    height: 80px;
+    /* height: 90%; */
 }
 
-#footer .organizers .unit_logo .unit .CS
-{
-    width: 140px;
-}
 
 #footer .contact .row{
     align-items: center;
@@ -472,14 +503,25 @@ p {
     #reward .row #total_reward img {
       width: 95%;
     }
-    #footer .organizers .unit_logo .unit img
+    /* #footer .organizers .unit_logo .unit img
     {
     width: 60px;
-    }
+    } */
     #footer .organizers .unit_logo .unit .CS
     {
         width: 100px;
     }
+
+    #footer .organizers .unit_logo .unit .UIT
+    {
+        width: 80px;
+    }
+
+    #footer .organizers .unit_logo .unit .HSV
+    {
+        width: 50px;
+    }
+
     #footer .contact .row img {
       width: 40px;
       margin-top: 0px;
