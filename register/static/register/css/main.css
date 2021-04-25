@@ -25,11 +25,15 @@ nav
     background-color: #482b78;
 }
 
-/* .navbar-brand
-{
-    margin-left: 150px;
-    margin-right: 150px;
-}  */
+.navbar .btn {
+    color: white;
+    background-color: #28a745;
+}
+
+.navbar .btn:hover {
+    color: white;
+    background-color: red;
+}
 
 .navbar-dark .navbar-collapse .navbar-nav .nav-item .nav-link {
     color: white;
