@@ -36,7 +36,7 @@ class register(View):
             else:
                 ctx = {"tf":tf}
                 messages.error(request, '❌ You entered an invalid value!')
-                return render(request, 'register/register.html', ctx)
+                return render(request, 'register/register.html', ctx, status=422)
                 
 
 class login(View):
