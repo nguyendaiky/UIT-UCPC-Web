@@ -1,0 +1,44 @@
+html 
+{
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: #482b78;
+    color: white;
+}
+
+
+nav > .collapse > ul > li > a
+{
+    font-size: 25px;
+    color: white;
+    /* margin-left: 60px;
+    margin-right: 60px; */
+}
+
+nav
+{
+    background-color: #482b78;
+}
+
+.navbar .btn {
+    color: white;
+    background-color: #28a745;
+}
+
+.navbar .btn:hover {
+    color: white;
+    background-color: red;
+}
+
+.navbar-dark .navbar-collapse .navbar-nav .nav-item .nav-link {
+    color: white;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
