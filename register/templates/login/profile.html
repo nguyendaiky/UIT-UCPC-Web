@@ -15,9 +15,6 @@
 	<span style="font-weight: 600;">Team: </span>
 	{{ item.team }}
 	<br>
-	<span style="font-weight: 600;">Phone: </span>
-	{{ item.phone }}
-	<br>
 	{% endfor %}
 	<span style="font-weight: 600;">Email: </span>
 	{{ user.email }}
@@ -35,12 +32,36 @@
 			<td>{{ item.member1 }}</td>
 		</tr>
 		<tr>
+			<th>CMND/CCCD:</th>
+			<td>{{ item.cmnd1 }}</td>
+		</tr>
+		<tr>
+			<th>Phone:</th>
+			<td>{{ item.phone1 }}</td>
+		</tr>
+		<tr>
 			<th>Member 2:</th>
 			<td>{{ item.member2 }}</td>
 		</tr>
 		<tr>
+			<th>CMND/CCCD:</th>
+			<td>{{ item.cmnd2 }}</td>
+		</tr>
+		<tr>
+			<th>Phone:</th>
+			<td>{{ item.phone2 }}</td>
+		</tr>
+		<tr>
 			<th>Member 3:</th>
 			<td>{{ item.member3 }}</td>
+		</tr>
+		<tr>
+			<th>CMND/CCCD:</th>
+			<td>{{ item.cmnd3 }}</td>
+		</tr>
+		<tr>
+			<th>Phone:</th>
+			<td>{{ item.phone3 }}</td>
 		</tr>
 		<tr>
 			<th>School:</th>

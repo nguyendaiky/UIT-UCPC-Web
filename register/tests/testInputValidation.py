@@ -47,10 +47,15 @@ class PostRequestsViewsTests(TestCase):
             reverse('register:register'), {
                 'team': 'Team A',
                 'member1': 'Nguyễn Văn Khang',
+                'cmnd1': '123456',
+                'phone1': '0983416237',
                 'member2': 'Trương Minh Quân',
+                'cmnd2': '123456',
+                'phone2': '0983416237',
                 'member3': 'Nhạc Phi',
+                'cmnd3': '123456',
+                'phone3': '0983416237',
                 'email': 'test@gm.uit.edu.vn',
-                'phone': '0983416237',
                 'school': [school.id],
                 'password': 'password'})
         self.assertEqual(response.status_code, 302) # redirect to login
@@ -63,11 +68,16 @@ class PostRequestsViewsTests(TestCase):
         response = self.client.post(
             reverse('register:register'), {
                 'team': 'Team A',
-                'member1': '@123🙁🙁😒',
-                'member2': '@123🙁🙁😒',
-                'member3': '@123🙁🙁😒',
+                'member1': '😁😁😁',
+                'cmnd1': '123456',
+                'phone1': '0983416237',
+                'member2': '😁😁😁',
+                'cmnd2': '123456',
+                'phone2': '0983416237',
+                'member3': '😁😁😁',
+                'cmnd3': '123456',
+                'phone3': '0983416237',
                 'email': 'test@gm.uit.edu.vn',
-                'phone': '0983416237',
                 'school': [school.id],
                 'password': 'password'})
         self.assertEqual(response.status_code, 422) # render again register.html and show error
@@ -79,12 +89,17 @@ class PostRequestsViewsTests(TestCase):
         school = School.objects.create(school='Foobar')
         response = self.client.post(
             reverse('register:register'), {
-                'team': '❌',
-                'member1': 'Nguyễn Đại Kỳ',
-                'member2': 'Nguyễn Đại Kỳ',
-                'member3': 'Nguyễn Đại Kỳ',
+                'team': '💕💕💕',
+                'member1': 'Nguyễn Văn Khang',
+                'cmnd1': '123456',
+                'phone1': '0983416237',
+                'member2': 'Trương Minh Quân',
+                'cmnd2': '123456',
+                'phone2': '0983416237',
+                'member3': 'Nhạc Phi',
+                'cmnd3': '123456',
+                'phone3': '0983416237',
                 'email': 'test@gm.uit.edu.vn',
-                'phone': '0983416237',
                 'school': [school.id],
                 'password': 'password'})
         self.assertEqual(response.status_code, 422) # render again register.html and show error
@@ -97,11 +112,16 @@ class PostRequestsViewsTests(TestCase):
         response = self.client.post(
             reverse('register:register'), {
                 'team': 'Team A',
-                'member1': 'Nguyễn Đại Kỳ',
-                'member2': 'Nguyễn Đại Kỳ',
-                'member3': 'Nguyễn Đại Kỳ',
-                'email': 'testvn',
-                'phone': '0983416237',
+                'member1': 'Nguyễn Văn Khang',
+                'cmnd1': '123456',
+                'phone1': '0983416237',
+                'member2': 'Trương Minh Quân',
+                'cmnd2': '123456',
+                'phone2': '0983416237',
+                'member3': 'Nhạc Phi',
+                'cmnd3': '123456',
+                'phone3': '0983416237',
+                'email': 'test.vn',
                 'school': [school.id],
                 'password': 'password'})
         self.assertEqual(response.status_code, 422) # render again register.html and show error
@@ -114,11 +134,16 @@ class PostRequestsViewsTests(TestCase):
         response = self.client.post(
             reverse('register:register'), {
                 'team': 'Team A',
-                'member1': 'Nguyễn Đại Kỳ',
-                'member2': 'Nguyễn Đại Kỳ',
-                'member3': 'Nguyễn Đại Kỳ',
-                'email': 'test@vn.com',
-                'phone': 'abc',
+                'member1': 'Nguyễn Văn Khang',
+                'cmnd1': '123456',
+                'phone1': 'abcdef',
+                'member2': 'Trương Minh Quân',
+                'cmnd2': '123456',
+                'phone2': 'abcdef',
+                'member3': 'Nhạc Phi',
+                'cmnd3': '123456',
+                'phone3': 'abcdef',
+                'email': 'test@gm.uit.edu.vn',
                 'school': [school.id],
                 'password': 'password'})
         self.assertEqual(response.status_code, 422) # render again register.html and show error
@@ -132,10 +157,15 @@ class PostRequestsViewsTests(TestCase):
             reverse('register:register'), {
                 'team': "<script>alert('hello')</script>",
                 'member1': "<script>alert('hello')</script>",
+                'cmnd1': '123456',
+                'phone1': '0983416237',
                 'member2': "<script>alert('hello')</script>",
+                'cmnd2': '123456',
+                'phone2': '0983416237',
                 'member3': "<script>alert('hello')</script>",
-                'email': 'user@test.com',
-                'phone': '0983416237',
+                'cmnd3': '123456',
+                'phone3': '0983416237',
+                'email': 'test@gm.uit.edu.vn',
                 'school': [school.id],
                 'password': 'password'})
         self.assertEqual(response.status_code, 422) # render again register.html and show error
@@ -147,12 +177,17 @@ class PostRequestsViewsTests(TestCase):
         school = School.objects.create(school='Foobar')
         response = self.client.post(
             reverse('register:register'), {
-                'team': "SELECT * FROM Team",
-                'member1': "SELECT * FROM Team",
-                'member2': "SELECT * FROM Team",
-                'member3': "SELECT * FROM Team",
-                'email': 'user@test.com',
-                'phone': '0983416237',
+                'team': 'SELECT * FROM Team',
+                'member1': 'SELECT * FROM Team',
+                'cmnd1': '123456',
+                'phone1': '0983416237',
+                'member2': 'SELECT * FROM Team',
+                'cmnd2': '123456',
+                'phone2': '0983416237',
+                'member3': 'SELECT * FROM Team',
+                'cmnd3': '123456',
+                'phone3': '0983416237',
+                'email': 'test@gm.uit.edu.vn',
                 'school': [school.id],
                 'password': 'password'})
         self.assertEqual(response.status_code, 422) # render again register.html and show error

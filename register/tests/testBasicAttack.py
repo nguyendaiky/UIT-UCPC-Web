@@ -52,13 +52,18 @@ class BaseTestRegister(TestCase):
         school = School.objects.create(school='Foobar')
         self.user={
             'team': 'Team A',
-            'member1': 'Nguyễn Văn Khang',
-            'member2': 'Trương Minh Quân',
-            'member3': 'Nhạc Phi',
-            'email': 'test@gm.uit.edu.vn',
-            'phone': '0983416237',
-            'school': [school.id],
-            'password': 'password'}
+                'member1': 'Nguyễn Văn Khang',
+                'cmnd1': '123456',
+                'phone1': '0983416237',
+                'member2': 'Trương Minh Quân',
+                'cmnd2': '123456',
+                'phone2': '0983416237',
+                'member3': 'Nhạc Phi',
+                'cmnd3': '123456',
+                'phone3': '0983416237',
+                'email': 'test@gm.uit.edu.vn',
+                'school': [school.id],
+                'password': 'password'}
         return super().setUp()
         
 class TestRegister(BaseTestRegister):
@@ -87,10 +92,15 @@ class Register(TestCase):
             reverse('register:register'), {
                 'team': 'Team A',
                 'member1': 'Nguyễn Văn Khang',
+                'cmnd1': '123456',
+                'phone1': '0983416237',
                 'member2': 'Trương Minh Quân',
+                'cmnd2': '123456',
+                'phone2': '0983416237',
                 'member3': 'Nhạc Phi',
+                'cmnd3': '123456',
+                'phone3': '0983416237',
                 'email': 'test@gm.uit.edu.vn',
-                'phone': '0983416237',
                 'school': [school.id],
                 'password': 'password'})
         self.assertEqual(response.status_code, 302)  # HttpResponseRedirect

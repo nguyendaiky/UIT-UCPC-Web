@@ -66,7 +66,7 @@ def profile(request):
 class edit(View):
     def get(self, request):
         emp = Team.objects.get(email=request.user.username)
-        ef = editForm(initial={'member1':emp.member1,'member2':emp.member2,'member3':emp.member3,'school':emp.school})
+        ef = editForm(initial={'member1':emp.member1, 'cmnd1': emp.cmnd1, 'phone1': emp.phone1, 'member2':emp.member2, 'cmnd2': emp.cmnd2, 'phone2': emp.phone2,'member3':emp.member3, 'cmnd3': emp.cmnd3, 'phone3': emp.phone3,'school':emp.school})
         return render(request, 'login/edit.html', {'ef':ef})
     def post(self, request):
         if request.method == 'POST':
@@ -76,6 +76,12 @@ class edit(View):
                 emp.member1 = ef.cleaned_data.get('member1')
                 emp.member2 = ef.cleaned_data.get('member2')
                 emp.member3 = ef.cleaned_data.get('member3')
+                emp.cmnd1 = ef.cleaned_data.get('cmnd1')
+                emp.cmnd2 = ef.cleaned_data.get('cmnd2')
+                emp.cmnd3 = ef.cleaned_data.get('cmnd3')
+                emp.phone1 = ef.cleaned_data.get('phone1')
+                emp.phone2 = ef.cleaned_data.get('phone2')
+                emp.phone3 = ef.cleaned_data.get('phone3')
                 emp.school = ef.cleaned_data.get('school')
                 emp.save()
                 messages.success(request, '✔️ Update success! ')
