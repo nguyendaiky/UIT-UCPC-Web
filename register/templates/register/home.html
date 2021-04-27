@@ -59,17 +59,17 @@
 
             {% if request.user.is_authenticated %}
             <div class="form-inline my-2 my-lg-0">
-                <a href="{% url 'register:profile' %}" class="btn btn-success">Profile</a>
+                <a href="{% url 'register:profile' %}" class="btn btn-success" style="width:80px;">Profile</a>
             </div>
             <div class="form-inline my-2 my-lg-0">
-                <a href="{% url 'register:logout' %}" class="btn btn-warning">Logout</a>
+                <a href="{% url 'register:logout' %}" class="btn btn-warning" style = "margin-left: 5px; width:80px;">Logout</a>
             </div>
             {% else %}
             <div class="form-inline my-2 my-lg-0">
-                <a href="{% url 'register:login' %}" class="btn btn-success">Login</a>
+                <a href="{% url 'register:login' %}" class="btn btn-success" style="width:80px;">Login</a>
             </div>
             <div class="form-inline my-2 my-lg-0">
-                <a href="{% url 'register:register' %}" class="btn btn-warning">Register</a>
+                <a href="{% url 'register:register' %}" class="btn btn-warning" style = "margin-left: 5px;width:80px; border: none;">Register</a>
             </div>
             {% endif %}
 
