@@ -9,10 +9,13 @@
 <hr>
 
 {% for message in messages %}
-<p id="messages">{{message}}</p>
+<div class="container">
+	<p id="messages">{{message}}</p>
+</div>
+
 {% endfor %}
 
-<div>
+<div class="container">
 	{% for item in data %}
 	<span style="font-weight: 600;">Team: </span>
 	{{ item.team }}
@@ -26,6 +29,7 @@
 <hr>
 
 {% if data %}
+<div class="container">
 <table>
 	<tbody>
 		{% for item in data %}
@@ -73,6 +77,7 @@
 	</tbody>
 </table>
 <a href="{% url 'register:edit' %}" class="btn btn-primary">Edit</a>
+</div>
 {% endif %}
 
 {% endblock content %}
