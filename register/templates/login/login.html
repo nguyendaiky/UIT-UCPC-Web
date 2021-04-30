@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="container" style="margin-top: 15px;">
-	<h3>Login</h3>
+	<h3>Đăng nhập</h3>
 </div>
 
 <hr>
@@ -17,7 +17,7 @@
 		<form action="{% url 'register:login' %}" method="post">
 			{% csrf_token %}
 			{{ lf.as_p }}
-			<button type="submit" class="btn btn-primary" style = "margin-top: 15px;">Submit</button>
+			<button type="submit" class="btn btn-primary" style = "margin-top: 15px;">Đăng nhập</button>
 		</form>
 	</div>
 </div>

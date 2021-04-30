@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="container" style="margin-top: 15px;">
-	<h3>Profile</h3>
+	<h3>Hồ sơ</h3>
 </div>
 
 <hr>
@@ -17,7 +17,7 @@
 
 <div class="container">
 	{% for item in data %}
-	<span style="font-weight: 600;">Team: </span>
+	<span style="font-weight: 600;">Tên đội: </span>
 	{{ item.team }}
 	<br>
 	{% endfor %}
@@ -34,10 +34,10 @@
 	<tbody>
 		{% for item in data %}
 		<tr>
-			<th>Name</th>
+			<th>Họ và Tên</th>
 			<th>CMND/CCCD</th>
-			<th>Phone</th>
-			<th>School</th>
+			<th>Số điện thoại</th>
+			<th>Trường</th>
 		</tr>
 		<tr>
 			<td>{{ item.member1 }}</td>
@@ -58,6 +58,7 @@
 		{% endfor %}
 	</tbody>
 </table>
+<p style="margin-top: 4px;">ℹ️ Mọi thông tin thay đổi vui lòng liên hệ Ban Tổ Chức.</p>
 </div>
 {% endif %}
 

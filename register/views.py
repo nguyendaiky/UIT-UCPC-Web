@@ -31,11 +31,11 @@ class register(View):
                 tf.save()
                 user = User.objects.create_user(Email, Email, Password)
                 Team = tf.cleaned_data.get('team')
-                messages.success(request, '✔️ Account was created for '+Team)
+                messages.success(request, '✔️ Tài khoản '+Team+' đã đăng ký thành công!')
                 return redirect('register:login')
             else:
                 ctx = {"tf":tf}
-                messages.error(request, '❌ You entered an invalid value!')
+                messages.error(request, '❌ Thông tin không hợp lệ!')
                 return render(request, 'register/register.html', ctx, status=422)
                 
 
@@ -54,7 +54,7 @@ class login(View):
                 auth_login(request, user)
                 return redirect('register:profile')
             else:
-                messages.error(request, '🙁 Team\'s name or Password is incorrect')
+                messages.error(request, '🙁 Email hoặc mật khẩu chưa chính xác!')
                 return redirect('register:login')
 
 @login_required         

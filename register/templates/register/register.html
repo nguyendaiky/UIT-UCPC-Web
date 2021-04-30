@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="container" style="margin-top: 15px;">
-	<h3>Register</h3>
+	<h3>Đăng ký</h3>
 </div>
 
 <hr>
@@ -54,13 +54,14 @@
 			{{ tf.email.label }}<br>
 			{{ tf.email }}
 			<small>{{ tf.email.errors }}</small>
+			<p>ℹ️ Email đăng ký được Ban Tổ Chức dùng để liên lạc với đội thi.</p>
 			{{ tf.school.label }}<br>
 			{{ tf.school }}
 			<small>{{ tf.school.errors }}</small>
 			{{ tf.password.label }}<br>
 			{{ tf.password }}
-			<small>{{ tf.password.errors }}</small><br>
-			<button type="submit" class="btn btn-primary">Submit</button>
+			<small>{{ tf.password.errors }}</small>
+			<button type="submit" class="btn btn-primary" style="margin-top: 10px;">Đăng ký</button>
 		</form>
 	</div>
 </div>
