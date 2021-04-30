@@ -1,0 +1,30 @@
+
+table, th, td {
+    border: 1px solid #fff;
+}
+
+th, td {
+    padding: 8px;
+}
+
+th {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+}
+
+.errorlist {
+    list-style-type: none;
+}
+
+#messages {
+    margin-left: 100px;
+}
+
+hr{
+    height: 1px;
+    background-color: #6d5593;
+    border: none;
+}

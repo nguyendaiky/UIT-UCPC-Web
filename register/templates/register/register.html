@@ -16,7 +16,50 @@
 	<div class="container">
 		<form action="{% url 'register:register' %}" method="post">
 			{% csrf_token %}
-			{{ tf.as_p }}
+
+			{{ tf.team.label }}<br>
+			{{ tf.team }}
+			<small>{{ tf.team.errors }}</small><br>
+
+			{{ tf.member1.label }}<br>
+			{{ tf.member1 }}
+			<small>{{ tf.member1.errors }}</small>
+			{{ tf.cmnd1.label }}<br>
+			{{ tf.cmnd1 }}
+			<small>{{ tf.cmnd1.errors }}</small>
+			{{ tf.phone1.label }}<br>
+			{{ tf.phone1 }}
+			<small>{{ tf.phone1.errors }}</small><br>
+
+			{{ tf.member2.label }}<br>
+			{{ tf.member2 }}
+			<small>{{ tf.member2.errors }}</small>
+			{{ tf.cmnd2.label }}<br>
+			{{ tf.cmnd2 }}
+			<small>{{ tf.cmnd2.errors }}</small>
+			{{ tf.phone2.label }}<br>
+			{{ tf.phone2 }}
+			<small>{{ tf.phone2.errors }}</small><br>
+
+			{{ tf.member3.label }}<br>
+			{{ tf.member3 }}
+			<small>{{ tf.member3.errors }}</small>
+			{{ tf.cmnd3.label }}<br>
+			{{ tf.cmnd3 }}
+			<small>{{ tf.cmnd3.errors }}</small>
+			{{ tf.phone3.label }}<br>
+			{{ tf.phone3 }}
+			<small>{{ tf.phone3.errors }}</small><br>
+
+			{{ tf.email.label }}<br>
+			{{ tf.email }}
+			<small>{{ tf.email.errors }}</small>
+			{{ tf.school.label }}<br>
+			{{ tf.school }}
+			<small>{{ tf.school.errors }}</small>
+			{{ tf.password.label }}<br>
+			{{ tf.password }}
+			<small>{{ tf.password.errors }}</small><br>
 			<button type="submit" class="btn btn-primary">Submit</button>
 		</form>
 	</div>

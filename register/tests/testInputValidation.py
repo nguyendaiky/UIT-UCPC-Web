@@ -47,17 +47,17 @@ class PostRequestsViewsTests(TestCase):
             reverse('register:register'), {
                 'team': 'Team A',
                 'member1': 'Nguyễn Văn Khang',
-                'cmnd1': '123456',
-                'phone1': '0983416237',
+                'cmnd1': '987654321', # cmnd 9 digits
+                'phone1': '0123456789', # phone number 10 digits
                 'member2': 'Trương Minh Quân',
-                'cmnd2': '123456',
-                'phone2': '0983416237',
+                'cmnd2': '987654321000', # cccd 12 digits
+                'phone2': '01234567890', # phone number 11 digits
                 'member3': 'Nhạc Phi',
-                'cmnd3': '123456',
-                'phone3': '0983416237',
+                'cmnd3': '987654321000', # cccd 12 digits
+                'phone3': '01234567890', # phone number 11 digits
                 'email': 'test@gm.uit.edu.vn',
                 'school': [school.id],
-                'password': 'password'})
+                'password': 'abcdefB1@'})
         self.assertEqual(response.status_code, 302) # redirect to login
         self.assertEqual(Team.objects.count(), team_count + 1)
 
@@ -68,15 +68,15 @@ class PostRequestsViewsTests(TestCase):
         response = self.client.post(
             reverse('register:register'), {
                 'team': 'Team A',
-                'member1': '😁😁😁',
-                'cmnd1': '123456',
-                'phone1': '0983416237',
+                'member1': '😁😁😁', # invalid name
+                'cmnd1': '987654321', # cmnd 9 digits
+                'phone1': '0123456789', # phone number 10 digits
                 'member2': '😁😁😁',
-                'cmnd2': '123456',
-                'phone2': '0983416237',
-                'member3': '😁😁😁',
-                'cmnd3': '123456',
-                'phone3': '0983416237',
+                'cmnd2': '987654321000', # cccd 12 digits
+                'phone2': '01234567890', # phone number 11 digits
+                'member3': '😁😁😁', # invalid name
+                'cmnd3': '987654321000', # cccd 12 digits
+                'phone3': '01234567890', # phone number 11 digits
                 'email': 'test@gm.uit.edu.vn',
                 'school': [school.id],
                 'password': 'password'})
@@ -89,16 +89,16 @@ class PostRequestsViewsTests(TestCase):
         school = School.objects.create(school='Foobar')
         response = self.client.post(
             reverse('register:register'), {
-                'team': '💕💕💕',
+                'team': '💕💕💕', # invalid team's name
                 'member1': 'Nguyễn Văn Khang',
-                'cmnd1': '123456',
-                'phone1': '0983416237',
+                'cmnd1': '987654321', # cmnd 9 digits
+                'phone1': '0123456789', # phone number 10 digits
                 'member2': 'Trương Minh Quân',
-                'cmnd2': '123456',
-                'phone2': '0983416237',
+                'cmnd2': '987654321000', # cccd 12 digits
+                'phone2': '01234567890', # phone number 11 digits
                 'member3': 'Nhạc Phi',
-                'cmnd3': '123456',
-                'phone3': '0983416237',
+                'cmnd3': '987654321000', # cccd 12 digits
+                'phone3': '01234567890', # phone number 11 digits
                 'email': 'test@gm.uit.edu.vn',
                 'school': [school.id],
                 'password': 'password'})
@@ -113,15 +113,15 @@ class PostRequestsViewsTests(TestCase):
             reverse('register:register'), {
                 'team': 'Team A',
                 'member1': 'Nguyễn Văn Khang',
-                'cmnd1': '123456',
-                'phone1': '0983416237',
+                'cmnd1': '987654321', # cmnd 9 digits
+                'phone1': '0123456789', # phone number 10 digits
                 'member2': 'Trương Minh Quân',
-                'cmnd2': '123456',
-                'phone2': '0983416237',
+                'cmnd2': '987654321000', # cccd 12 digits
+                'phone2': '01234567890', # phone number 11 digits
                 'member3': 'Nhạc Phi',
-                'cmnd3': '123456',
-                'phone3': '0983416237',
-                'email': 'test.vn',
+                'cmnd3': '987654321000', # cccd 12 digits
+                'phone3': '01234567890', # phone number 11 digits
+                'email': 'test.vn', # invalid email address
                 'school': [school.id],
                 'password': 'password'})
         self.assertEqual(response.status_code, 422) # render again register.html and show error
@@ -135,19 +135,63 @@ class PostRequestsViewsTests(TestCase):
             reverse('register:register'), {
                 'team': 'Team A',
                 'member1': 'Nguyễn Văn Khang',
-                'cmnd1': '123456',
-                'phone1': 'abcdef',
+                'cmnd1': '987654321',
+                'phone1': '0123', # phone number 10 digits (fill 4 digits => fail)
                 'member2': 'Trương Minh Quân',
-                'cmnd2': '123456',
-                'phone2': 'abcdef',
+                'cmnd2': '987654321000',
+                'phone2': '012345678', # phone number 11 digits (fill 9 digits => fail)
                 'member3': 'Nhạc Phi',
-                'cmnd3': '123456',
-                'phone3': 'abcdef',
+                'cmnd3': '987654321000',
+                'phone3': '01234567890', # phone number 11 digits (fill 10 or 11 digits => success)
                 'email': 'test@gm.uit.edu.vn',
                 'school': [school.id],
                 'password': 'password'})
         self.assertEqual(response.status_code, 422) # render again register.html and show error
         self.assertEqual(Team.objects.count(), team_count)
+
+    # Test invalid CMND/CCCD
+    def test_post_register_invalid_cmnd(self):
+        team_count = Team.objects.count()
+        school = School.objects.create(school='Foobar')
+        response = self.client.post(
+            reverse('register:register'), {
+                'team': 'Team A',
+                'member1': 'Nguyễn Văn Khang',
+                'cmnd1': '98765432', # cmnd 9 digits (fill 8 digits => fail)
+                'phone1': '0123456789', 
+                'member2': 'Trương Minh Quân',
+                'cmnd2': '9876543210', # cccd 12 digits (fill 10 digits => fail)
+                'phone2': '01234567890',
+                'member3': 'Nhạc Phi',
+                'cmnd3': '987654321000', # cccd 12 digits (fill 11 digits => fail)
+                'phone3': '01234567890', 
+                'email': 'test@gm.uit.edu.vn',
+                'school': [school.id],
+                'password': 'password'})
+        self.assertEqual(response.status_code, 422) # render again register.html and show error
+        self.assertEqual(Team.objects.count(), team_count)
+
+    # Test valid CMND/CCCD
+    def test_post_register_valid_cmnd(self):
+        team_count = Team.objects.count()
+        school = School.objects.create(school='Foobar')
+        response = self.client.post(
+            reverse('register:register'), {
+                'team': 'Team A',
+                'member1': 'Nguyễn Văn Khang',
+                'cmnd1': '987654321', # cmnd 9 digits
+                'phone1': '0123456789', 
+                'member2': 'Trương Minh Quân',
+                'cmnd2': '987654321000', # cccd 12 digits
+                'phone2': '01234567890',
+                'member3': 'Nhạc Phi',
+                'cmnd3': '987654321', # cccd 9 digits
+                'phone3': '01234567890', 
+                'email': 'test@gm.uit.edu.vn',
+                'school': [school.id],
+                'password': 'abcdefgB01@'})
+        self.assertEqual(response.status_code, 302) # render again register.html and show error
+        self.assertEqual(Team.objects.count(), team_count+1)
 
     # Test XSS 
     def test_post_register_XSS(self):

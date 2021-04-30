@@ -53,17 +53,17 @@ class BaseTestRegister(TestCase):
         self.user={
             'team': 'Team A',
                 'member1': 'Nguyễn Văn Khang',
-                'cmnd1': '123456',
-                'phone1': '0983416237',
+                'cmnd1': '111111111',
+                'phone1': '0111111111',
                 'member2': 'Trương Minh Quân',
-                'cmnd2': '123456',
-                'phone2': '0983416237',
+                'cmnd2': '111111111',
+                'phone2': '0111111111',
                 'member3': 'Nhạc Phi',
-                'cmnd3': '123456',
-                'phone3': '0983416237',
+                'cmnd3': '111111111',
+                'phone3': '0111111111',
                 'email': 'test@gm.uit.edu.vn',
                 'school': [school.id],
-                'password': 'password'}
+                'password': 'abcdefghB1@'}
         return super().setUp()
         
 class TestRegister(BaseTestRegister):
@@ -92,17 +92,17 @@ class Register(TestCase):
             reverse('register:register'), {
                 'team': 'Team A',
                 'member1': 'Nguyễn Văn Khang',
-                'cmnd1': '123456',
-                'phone1': '0983416237',
+                'cmnd1': '123456789',
+                'phone1': '0123456789',
                 'member2': 'Trương Minh Quân',
-                'cmnd2': '123456',
-                'phone2': '0983416237',
+                'cmnd2': '123456789',
+                'phone2': '01234567891',
                 'member3': 'Nhạc Phi',
-                'cmnd3': '123456',
-                'phone3': '0983416237',
+                'cmnd3': '123456789',
+                'phone3': '01234567891',
                 'email': 'test@gm.uit.edu.vn',
                 'school': [school.id],
-                'password': 'password'})
+                'password': 'abcdefghB1'})
         self.assertEqual(response.status_code, 302)  # HttpResponseRedirect
         self.assertEqual(Team.objects.count(), team_count + 1)
 
