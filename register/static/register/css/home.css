@@ -456,11 +456,25 @@ p {
     align-items: center;
     text-align: center;
 }
-
+/* 
 #footer .organizers .unit_logo .unit img
 {
-    height: 80px;
+    width: 100%;
+} */
+
+#footer .organizers .unit_logo .unit .UIT
+{
+    /* height: 80px; */
     /* height: 90%; */
+    width: 110%;
+}
+
+#footer .organizers .unit_logo .unit .HSV {
+  width: 90%;
+}
+
+#footer .organizers .unit_logo .unit .CS {
+  width: 120%;
 }
 
 
