@@ -28,13 +28,14 @@ nav {
 }
 
 .navbar .btn {
-    color: white;
-    background-color: #28a745;
+    background-color: #fcf951ff;
+    color: #422057ff;
+
 }
 
 .navbar .btn:hover {
-    color: white;
-    background-color: red;
+    color: #482b78;
+    background-color: #4cf2d2;
 }
 
 .navbar-dark .navbar-collapse .navbar-nav .nav-item .nav-link {
