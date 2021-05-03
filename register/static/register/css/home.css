@@ -611,12 +611,17 @@ p {
     margin-bottom: 50px;
 }
 }
-@media only screen and (max-width: 991px) 
+@media only screen and (max-width: 992px) 
 {
   #footer .contact .row img {
     width: 40px;
     margin-top: 0px;
-}
+  }
+
+  #reward {
+    padding-bottom: 40px;
+    text-align: center;
+  }
 }
 
 
