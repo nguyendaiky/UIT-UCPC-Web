@@ -20,14 +20,21 @@
 	<span style="font-weight: 600;">Tên đội: </span>
 	{{ item.team }}
 	<br>
-	{% endfor %}
 	<span style="font-weight: 600;">Email: </span>
-	{{ user.email }}
+	{{ item.email }}
 	<br>
+	<span style="font-weight: 600;">Lệ phí thi: </span>
+	{% if item.paid == True %}
+		<span style="color: #4cf2d2;">Đã thanh toán</span>
+	{% else %}
+		<span style="color: #fcf951ff;">Chưa thanh toán</span>
+	{% endif %}
+	<br>
+	{% endfor %}
 
 </div>
+<br>
 
-<hr>
 {% if data %}
 <div class="container">
 <table>
@@ -58,7 +65,7 @@
 		{% endfor %}
 	</tbody>
 </table>
-<p style="margin-top: 4px;">ℹ️ Mọi thông tin thay đổi vui lòng liên hệ Ban Tổ Chức.</p>
+<p style="margin-top: 8px;">ℹ️ Mọi thông tin thắc mắc hoặc thay đổi vui lòng liên hệ Ban Tổ Chức tại mail: ucpc@uit.edu.vn</p>
 </div>
 {% endif %}
 
